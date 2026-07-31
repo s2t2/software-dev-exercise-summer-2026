@@ -1,17 +1,6 @@
-# Starter Repository for Software Development Exercise
-
-Student instructions (feel free to remove this section later, as desired):
-
-> FYI - there are some important things missing from this repo. Follow along in class to implement testing and continuous integration, and secure environment variables using a ".env" and ".gitignore" file, etc. We may also extend the functionality to build a web interface. For full solutions, see https://github.com/s2t2/my-first-repo-fall-2025 (including that repository's [commit history](https://github.com/s2t2/my-first-repo-fall-2025/commits/main/) for step-by-step walkthrough).
->
-> FYI - students please use a "premium" AlphaVantage API Key shared by the prof (see "Configuration" section below).
-
-
-Students: first visit https://github.com/prof-rossetti/software-dev-exercise and click "Use this template" green button to make a copy of the repo under your own control.
-
+# Software Development Exercise
 
 ## Setup
-
 
 Clone the repo to download it from GitHub. Perhaps onto the Desktop.
 
@@ -24,13 +13,13 @@ cd ~/Desktop/software-dev-exercise
 Create a virtual environment:
 
 ```sh
-conda create -n my-first-env-fall-2025 python=3.11
+conda create -n software-dev-env python=3.11
 ```
 
 Activate the virtual environment:
 
 ```sh
-conda activate my-first-env-fall-2025
+conda activate software-dev-env
 ```
 
 Install package dependencies:
@@ -49,9 +38,6 @@ Create a local ".env" file and store your environment variable in there:
 # this is the ".env" file...
 
 ALPHAVANTAGE_API_KEY="______________"
-
-# also tell flask where our web app is defined:
-FLASK_APP=web_app
 ```
 
 ## Usage
@@ -65,6 +51,10 @@ python -m app.rps
 Run stocks dashboard:
 
 ```sh
+# option a) pass in the env var at runtime from the command line:
+ALPHAVANTAGE_API_KEY="_____" python -m app.stocks
+
+# option b) after we have set up our env var in the ".env" file, run as is:
 python -m app.stocks
 ```
 
