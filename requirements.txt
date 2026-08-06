@@ -11,3 +11,6 @@ pytest
 
 # web app:
 flask
+
+# for running the web app on a production server:
+gunicorn
