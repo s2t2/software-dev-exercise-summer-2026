@@ -1,4 +1,5 @@
-{% extends "layout.html" %}
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "rps_form" %}
 
 {% block content %}
 
@@ -6,13 +7,13 @@
 
     <form action="/rps/results" method="POST">
         <label for="user_choice">Choose your move:</label>
-        <select name="user_choice">
+        <select name="user_choice" class="form-select" aria-label="Select a move">
             <option value="rock">Rock</option>
             <option value="paper">Paper</option>
             <option value="scissors">Scissors</option>
         </select>
 
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-warning">Submit</button>
     </form>
 
 {% endblock %}
