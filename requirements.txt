@@ -11,3 +11,6 @@ pytest
 
 # web app:
 flask
+
+# required by the production server only
+gunicorn
